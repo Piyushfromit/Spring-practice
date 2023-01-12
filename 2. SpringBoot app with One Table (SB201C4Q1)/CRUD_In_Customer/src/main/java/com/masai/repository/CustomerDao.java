@@ -7,6 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.masai.model.Customer;
+import com.masai.model.CustomerDTO;
+
 
 
 @Repository
@@ -27,6 +29,9 @@ public interface CustomerDao  extends JpaRepository<Customer, Integer> {
 	
 //	@Query("update Customer c set c.password =?1 where c.email=?2 and c.password=?3")
 //	Customer updatePassword(String newPassword, String email, String oldPassword);
+	
+	@Query("select new com.masai.model.CustomerDTO(c.customerName ,c.address,c.age) from Customer c")
+	List<CustomerDTO> getNameAddressAgeOfAllCustomer();
 	
 	
 }

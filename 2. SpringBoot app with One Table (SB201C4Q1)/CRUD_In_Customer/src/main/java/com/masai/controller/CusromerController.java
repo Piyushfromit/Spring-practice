@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.masai.model.Customer;
+import com.masai.model.CustomerDTO;
 
 import com.masai.servuce.CustomerService;
 
@@ -97,6 +98,13 @@ public class CusromerController {
 		return new ResponseEntity<Customer>(cus, HttpStatus.OK);
 
 	}
+	
+	
+//	@GetMapping("/employeeD")
+//	public  ResponseEntity<List<CustomerDTO>> getNameAddressSalaryOfAllEmployee(){
+//		
+//		return new ResponseEntity<List<CustomerDTO>>(cService.getNameAddressAgeOfAllCustomers(), HttpStatus.OK);
+//	}
 	
 	
 

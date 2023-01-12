@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.masai.exception.CustomerException;
 
 import com.masai.model.Customer;
+import com.masai.model.CustomerDTO;
 
 import com.masai.repository.CustomerDao;
 
@@ -108,6 +109,16 @@ public class CustomerServiceImp  implements CustomerService {
 			throw new CustomerException("Customer not found");
 		}
 		return customer;
+	}
+
+	@Override
+	public List<CustomerDTO> getNameAddressAgeOfAllCustomers() throws CustomerException {
+		// TODO Auto-generated method stub
+		List<CustomerDTO> list = cDao.getNameAddressAgeOfAllCustomer();
+		if (list.size() == 0) {
+			throw new CustomerException("Customer not found with");
+		}
+		return list;
 	}
 	
 

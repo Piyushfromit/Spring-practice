@@ -5,6 +5,7 @@ import java.util.List;
 import com.masai.exception.CustomerException;
 
 import com.masai.model.Customer;
+import com.masai.model.CustomerDTO;
 
 public interface CustomerService {
 
@@ -32,7 +33,7 @@ public interface CustomerService {
 
 //	public List<Customer> getCustomersBetweenAge(Integer start_age Integer end_age)throws CustomerException
 
-//	public List<CustomerDTO> getNameAddressAgeOfAllCustomers()throws CustomerException;
+	public List<CustomerDTO> getNameAddressAgeOfAllCustomers()throws CustomerException;
 
 
 
