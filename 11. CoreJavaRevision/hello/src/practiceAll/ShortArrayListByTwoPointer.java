@@ -1,47 +1,41 @@
 package practiceAll;
 
 import java.util.ArrayList;
-import java.util.Collections;
+
 
 public class ShortArrayListByTwoPointer {
 	
 	public static void main(String[] args) {
 		
-		ArrayList<Integer> num = new ArrayList<>();
+		ArrayList<Integer> nums = new ArrayList<>();
 		
-		num.add(8);
-		num.add(6);
-		num.add(12);
-		num.add(6);
+		nums.add(12);
+		nums.add(18);
+		nums.add(4);
+		nums.add(8);
+		nums.add(6);
+		nums.add(12);
+		nums.add(6);
 		
-		
-		int size = num.size();
-		
-		for(int i=0; i<size; i++) {
+		for(int i=0; i<nums.size(); i++) {
 			
-			for (int j=i+1; j<size; j++) {
+			for(int j=i+1; j<nums.size(); j++) {
 				
-				if(num.get(i)>  num.get(j)) {
+				if(nums.get(i)>nums.get(j)) {
+					int temp =nums.get(i);
 					
-					int temp = num.get(i);
-					
-					num.set(i, num.get(j));
-					
-					num.set(j, temp);
-					
+					nums.set(i,nums.get(j) );
+					nums.set(j,temp );
 				}
+				
 			}
 		}
 		
-		
-	   //  Collections.sort(num);
-		
-	  System.out.println(num);
+		System.out.println(nums);
 		
 	}
-	
-	
-	
-	
+
 
 }
+
+
