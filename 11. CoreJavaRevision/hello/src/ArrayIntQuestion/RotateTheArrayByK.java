@@ -10,24 +10,56 @@ public class RotateTheArrayByK {
 		int k =3; 
 		
 		// output will be: {7,5,2,3,6,8,9}
-		int n= arr.length;
+		int n =arr.length;
 		
-		k= k%n;
+		int newarr [] = new int [n];
 		
-		int newarr []  =new int[n];   //*****************
-		
-		for(int i=0; i<n; i++) {
-			if(i<k) {
-				newarr[i]= arr[n-k+i];
-			}else {
-				newarr[i]= arr[i-k];
-			}
-		}
+
+        for(int i=0; i< n; i++) {
+        	if(i<k) {
+        		newarr[i]= arr[n-k+i];
+        	}else {
+        		newarr[i]= arr[i-k];
+        	}
+        }
+        
 		
 		for (int i : newarr) {
-			System.out.print(i+" ");
+			System.out.print(i);
 		}
-		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//int n= arr.length;
+//
+//k= k%n;
+//
+//int newarr []  =new int[n];   //*****************
+//
+//for(int i=0; i<n; i++) {
+//	if(i<k) {
+//		newarr[i]= arr[n-k+i];
+//	}else {
+//		newarr[i]= arr[i-k];
+//	}
+//}
+//
+//for (int i : newarr) {
+//	System.out.print(i+" ");
+//}

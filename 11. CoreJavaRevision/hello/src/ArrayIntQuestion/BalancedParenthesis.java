@@ -4,89 +4,117 @@ import java.util.*;
 
 public class BalancedParenthesis {
 	
-public static void main(String [] args){
-        
-        String oldstr = "{(([])[])[]}";
-        
-        String newstr= oldstr.replaceAll("[a-z,A-Z,0-9]", "");
-        
-        System.out.println(isBalanced(newstr));
-            
-    }
-    public static boolean isBalanced(String str) {
-        Stack<Character> stack = new Stack<>();
-        for (int i = 0; i < str.length(); i++) {
-            
-        	char c = str.charAt(i);
-            
-        	if (c == '(' || c == '[' || c == '{') {
-                stack.push(c);
-            } 
-        	else if (c == ')' || c == ']' || c == '}') {
-                
-        		if (stack.isEmpty()) {
-                    return false;
-                }
-                char top = stack.pop();
-                if ((c == ')' && top != '(') || (c == ']' && top != '[') || (c == '}' && top != '{')) {
-                    return false;
-                }
-                
-            }
-        }
-        return stack.isEmpty();
-    }
+	public static void main(String[] args) {
+		
+		String str = "{(([])[])[]}";
+		
+		Stack<Character> stack = new Stack<>();
+		
+		for(int i=0; i<str.length(); i++) {
+			
+			char c = str.charAt(i);
+			
+			if(c == '(' || c == '[' || c == '{') {
+				stack.add(c);
+				
+			}
+			else if( c==')' ||  c=='}' ||  c==']') {
+				
+				if(stack.empty()) {
+					
+					System.out.println(" Unbalanced");
+					return;
+				}
+				
+				char top = stack.pop();
+				
+				if( c== ')' && top !='(' ||  c== '}' && top !='{' || c== ']' && top !='[' ) {
+						System.out.println(" Unbalanced");
+						return;
+				}
+			}
+		}
+		
+		if(stack.empty()) {
+			System.out.println(" balanced");
+		}else {
+			System.out.println(" Unbalanced");
+		}
+		
+		
+	}
 
 }
-//   another simple approach, but it will not pass all test case
-//import java.util.*;
-//
-// public class BalancedParenthesis {
-//    public static void main(String [] args){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//1rd approach
+
+//public static void main(String [] args){
+//    
+//    String oldstr = "{(([])[])[]}";
+//    
+//    String newstr= oldstr.replaceAll("[a-z,A-Z,0-9]", "");
+//    
+//    System.out.println(isBalanced(newstr));
 //        
-//        String str = "{(([])[])[]}";
+//}
+//public static boolean isBalanced(String str) {
+//    Stack<Character> stack = new Stack<>();
+//    for (int i = 0; i < str.length(); i++) {
 //        
-//        Stack<Character> stack  = new Stack<>() ;
-//		
-//		for(int i=0; i< str.length(); i++) {
-//			
-//			char c = str.charAt(i);
-//			
-//			if(c=='(' || c=='{' || c=='[') {
-//				stack.add(c);
-//				
-//				
-//			}else if(   (c==')' || c=='}' || c==']') && stack.isEmpty()==false ){
-//				
-//				
-//				char top = stack.peek();
-//				
-//				if( ( c==')' && top =='(' ) || ( c=='}' && top =='{' ) || ( c==']' && top =='[' )) {
-//					
-//					stack.pop();
-//					
-//				}
-//			}else if(   (c==')' || c=='}' || c==']') && stack.isEmpty()==true ) {
-//				stack.add('$');
-//			}
-//				
-//		}
-//		
-//		if( stack.isEmpty()) {
-//			System.err.println("balanced");
-//		}else {
-//			System.err.println("unbalanced");
-//		}
+//    	char c = str.charAt(i);
 //        
-//        
-//        //System.out.println(str);
-//        
-//        
+//    	if (c == '(' || c == '[' || c == '{') {
+//            stack.push(c);
+//        } 
+//    	else if (c == ')' || c == ']' || c == '}') {
+//            
+//    		if (stack.isEmpty()) {
+//                return false;
+//            }
+//            char top = stack.pop();
+//            if ((c == ')' && top != '(') || (c == ']' && top != '[') || (c == '}' && top != '{')) {
+//                return false;
+//            }
+//            
+//        }
 //    }
+//    return stack.isEmpty();
 //}
 
-
-// 3rd approach 
+// 2rd approach 
 
 //import java.util.Stack;
 //
