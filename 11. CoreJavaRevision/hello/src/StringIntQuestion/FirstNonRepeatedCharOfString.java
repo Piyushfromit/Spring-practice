@@ -25,8 +25,6 @@ public class FirstNonRepeatedCharOfString {
 		}
 		
 		
-		
-		
 		for(Character c: map.keySet()){
             if(map.get(c)==1){
                 System.out.println(c);

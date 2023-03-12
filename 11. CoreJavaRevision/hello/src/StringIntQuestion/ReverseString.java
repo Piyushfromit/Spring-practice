@@ -6,22 +6,32 @@ public class ReverseString {
 
         String str="piyush";
 
-        //Approch 1
+        //Approach 1  **********************************
         
-        String rev="";
+        StringBuilder rev1 = new StringBuilder();
+        
+        for(int i=str.length()-1; i>=0; i--){
+            rev1.append(str.charAt(i));
+        }
+        
+        System.out.println(rev1);
+        
+        //Approach 2   **********************************
+
+        String rev2="";
 
         for(int i=str.length()-1; i>=0; i--){
-            rev+=str.charAt(i);
+            rev2+=str.charAt(i);
         }
-        System.out.println(rev);
+        System.out.println(rev2);
 
-        //Approch 2
+        //Approach 3   **********************************
 
-       StringBuilder srev = new StringBuilder(str);
+       StringBuilder rev3 = new StringBuilder(str);
        
-       srev.reverse();
+       rev3.reverse();
        
-       System.out.println(srev);
+       System.out.println(rev3);
 
     }
 
