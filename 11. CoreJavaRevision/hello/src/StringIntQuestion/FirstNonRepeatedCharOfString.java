@@ -5,10 +5,14 @@ import java.util.*;
 
 public class FirstNonRepeatedCharOfString {
 	
+	
+	
+	
 	public static void main(String[] args) {
-		String str = "hhrctrctsh";
+		String str = "hhrctzrctsh";
 		
-		Map<Character, Integer> map = new HashMap<>();
+		// ListHasMap maintain the order of insertion
+		Map<Character, Integer> map = new LinkedHashMap<>();
 		
 		for (int i = 0; i < str.length(); i++) {
 		    char ch = str.charAt(i);
@@ -19,6 +23,9 @@ public class FirstNonRepeatedCharOfString {
 		        map.put(ch, 1);
 		    }
 		}
+		
+		
+		
 		
 		for(Character c: map.keySet()){
             if(map.get(c)==1){

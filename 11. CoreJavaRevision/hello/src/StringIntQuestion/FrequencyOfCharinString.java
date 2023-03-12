@@ -8,7 +8,7 @@ public class FrequencyOfCharinString {
 		
 		String str = "hello piyush";
 	        
-	    Map <Character, Integer> map = new HashMap<>();
+	    Map <Character, Integer> map = new TreeMap<>();
 	    
         int len = str.length();
         
@@ -21,7 +21,8 @@ public class FrequencyOfCharinString {
             }
             
             if(map.containsKey(ch)){
-                map.put(ch, map.get(ch)+1);
+            	int count =map.get(ch);
+                map.put(ch, count+1);
             }else{
                 map.put(ch, 1);
             }
