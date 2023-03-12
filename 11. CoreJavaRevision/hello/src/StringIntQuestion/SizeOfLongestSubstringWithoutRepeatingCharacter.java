@@ -3,7 +3,7 @@ package StringIntQuestion;
 import java.util.*;
 
 
-public class LongestSubstringWithoutRepeatingCharacter {
+public class SizeOfLongestSubstringWithoutRepeatingCharacter {
 	
 	public static void main(String[] args) {
 		
