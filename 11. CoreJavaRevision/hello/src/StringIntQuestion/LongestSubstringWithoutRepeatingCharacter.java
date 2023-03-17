@@ -7,38 +7,34 @@ public class LongestSubstringWithoutRepeatingCharacter {
 	
 	
 	public static void main(String[] args) {
-		String s= "abbacd";
+		String str= "abbacd";
 		 
-		 int maxLen = 0;
-		 int left = 0;
-		 
-		 if (s == null || s.length() == 0) {
-		        System.out.println(0);
-		        return;
-		 }
+		int left =0; 
+		int maxLen=0;
 		
-		 Set<Character> set = new LinkedHashSet<>();
-		 String maxSubstring = "";
+		Set<Character> set = new LinkedHashSet<>();
 		
-		 for (int right = 0; right < s.length(); right++) {
-			 
-		     char c = s.charAt(right);
-		     
-		     while(set.contains(c)) {
-		         // remove characters from the left end of the set
-		         set.remove(s.charAt(left));
-		         left++;
-		     }
-		     
-		     set.add(c);
-		     if (right - left + 1 > maxLen) {
-		            maxLen = right - left + 1;
-		            maxSubstring = s.substring(left, right + 1);
-		     }
-		     
-		 }
-		    
-		 System.out.println( maxSubstring);
+		String maxStr ="";
+		
+		for(int right=0; right < str.length(); right++) {
+			
+			char ch = str.charAt(right);
+			
+			while(set.contains(ch)) {
+				set.remove(str.charAt(left));
+				left++;
+			}
+			
+			set.add(ch);
+			
+			if(right-left+1>maxLen) {
+				maxLen=right-left+1;
+				maxStr=(str.substring(left, right+1));
+			}
+			
+		}
+		System.out.println(maxStr);
 	}
 
 }
+

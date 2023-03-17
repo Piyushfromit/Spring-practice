@@ -11,11 +11,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class MyMasaiMailApplication {
 
 	public static void main(String[] args) {
-	 ApplicationContext ctx=	SpringApplication.run(MyMasaiMailApplication.class, args);
+	 SpringApplication.run(MyMasaiMailApplication.class, args);
 	
-	 Hello obj= ctx.getBean("hello", Hello.class);
 	 
-	 obj.printMessage();
 	
 	}
 
