@@ -15,11 +15,15 @@ public class TwoSumWithTwoPointerWhenArrayIsSorted {
 			
 			if(arr[left]+ arr[right]<target) {
 				left++;
+				
 			}else if(arr[left]+ arr[right]>target) {
 				right--;
+				
 			}else if(arr[left]+ arr[right]==target) {
+				
 				System.out.println(left + "  " + right);
 				return;
+				
 			}
 			
 			

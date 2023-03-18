@@ -7,7 +7,7 @@ public class ThisKey {
 	
 	void fun1() {
 		
-	int	n = 200;
+	int	n = 2000;
 		
 		System.out.println(n);
 		System.out.println(this.n);   // this keyword is refers to current object. 
@@ -22,7 +22,7 @@ public class ThisKey {
 		int n = 300;
 		System.out.println(n);
 		
-		// System.out.println(this.n);   this keyword can not use inside static class 
+		// System.out.println(this.n);   // this keyword can not use inside static class 
 		
 	}
 	

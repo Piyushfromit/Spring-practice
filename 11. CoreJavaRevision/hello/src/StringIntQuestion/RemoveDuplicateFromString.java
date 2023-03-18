@@ -14,17 +14,16 @@ public class RemoveDuplicateFromString {
 		// if data is present already then it will not add, 
 		Set<Character> set = new LinkedHashSet<>();
 		
-		for(int i=0; i< n ; i++) {
-			
+		for(int i=0; i<str.length(); i++) {
 			set.add(str.charAt(i));
-			
 		}
 		
-		StringBuilder ans= new StringBuilder();
+		StringBuilder ans = new StringBuilder();
+		
+		for (Character character : set) {
+			ans.append(character);
+		}
 
-        for(Character c:set){
-            ans.append(c);
-        }
         System.out.println("Original string: " + str);
         System.out.println("String without duplicates: " + ans.toString());
        

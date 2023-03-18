@@ -15,7 +15,7 @@ class A{
 class B extends A{
 	
 	public B(){
-		  //  super();   //  by default there is super, jo it is calling parent class constructor
+		  //  super();   //  by default there is super, so it is calling parent class constructor
 		System.out.println("in B");
 	}
 	
