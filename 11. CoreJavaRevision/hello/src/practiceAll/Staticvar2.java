@@ -25,6 +25,8 @@ public class Staticvar2 {
     	
     	Staticvar2.print2(); // Static method can call without object;
     	
+    	print2();
+    	
 	}
 
 }

@@ -2,9 +2,9 @@ package practiceAll;
 
 public class StaticVar {
 	
-	 //   int count =0;   it will not increment and create again again 
+	 //  int count =0;  // it will not increment and create again again 
 	
-	 static int count =0;    //  it will increment and create only once.
+	  static int count =0;    //  it will increment and create only once.
 	 
 	 void printCount() {
 		 System.out.println(count++);
@@ -19,7 +19,8 @@ public class StaticVar {
 		 c1.printCount();
 		 c2.printCount();
 		 c3.printCount();
-	}
+		 
+	 }
 	 
 	 
 
